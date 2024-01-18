@@ -80,7 +80,7 @@ def main() -> None:
     global is_process_0, params, optimize
 
     lr = 0.00005
-    batch_size = 6
+    batch_size = 1
     n_accumulation_steps = 8
     max_len = 640
     n_epochs = 7
