@@ -94,12 +94,12 @@ def main() -> None:
         wandb.init(project='llama-finetuning-gsm', config=dict(learning_rate=lr, batch_size=batch_size * n_accumulation_steps, n_epochs=n_epochs, optimiser='adamw'))
 
     key = rand.key(seed, impl='rbg')
-    tokenizer = LlamaTokenizer.from_pretrained('meta-llama/Llama-2-7b-hf')
+    tokenizer = LlamaTokenizer.from_pretrained('meta-llama/Llama-2-7b-chat-hf')
     dataset = GSMDataset(split='train')
     collate_fn = partial(gsm_collate_fn_train, tokenizer, max_len)
     dataloader = LlamaDataLoader(dataset, collate_fn, batch_size, seed, drop_last=True)  # TODO: setting `drop_last` because the `batch_size` of `rotary_values` is not properly handled
 
-    params = load_params_from_disk('llama2-7B.pickle')
+    params = load_params_from_disk('llama2-7B.pickle-chat')
     set_save_params_signal()
 
     n_steps = math.ceil(len(dataloader) / n_accumulation_steps)
