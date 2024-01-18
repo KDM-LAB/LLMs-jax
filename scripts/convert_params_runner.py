@@ -7,8 +7,8 @@ import jax
 import jax.numpy as jnp
 from transformers import LlamaForCausalLM
 import gc
-from lib.llama import check_llama, model_config_llama1_7B, model_config_llama2_13B, model_config_llama2_70B, model_config_llama2_7B, model_config_orca2_13B, model_config_orca2_7B, model_config_llama1_30B, model_config_llama1_13B, model_config_solar_10_7B, zephyr_config_3B
-from lib.llama_params import convert_llama
+from lib.LLM import check_llama, model_config_llama1_7B, model_config_llama2_13B, model_config_llama2_70B, model_config_llama2_7B, model_config_orca2_13B, model_config_orca2_7B, model_config_llama1_30B, model_config_llama1_13B, model_config_solar_10_7B, zephyr_config_3B,mistral_config_7B
+from lib.LLM_params import convert_llama
 from lib.param_utils import save_params
 
 pairs = {
@@ -29,13 +29,14 @@ pairs = {
     'SOLAR-10.7B-Instruct':('upstage/SOLAR-10.7B-Instruct-v1.0',model_config_solar_10_7B),
     'SOLAR-10.7B':('upstage/SOLAR-10.7B-v1.0',model_config_solar_10_7B),
     'Zephyr-3B':('stabilityai/stablelm-zephyr-3b', zephyr_config_3B),
-    'Zephyr-7B':('HuggingFaceH4/zephyr-7b-beta', model_config_llama2_7B),
-    'Mistral-7B':('mistralai/Mistral-7B-v0.1', model_config_llama2_7B),
-    'Mistral-7B-Instruct':('mistralai/Mistral-7B-Instruct-v0.1',model_config_llama2_7B),
-    'Mistral-7B-Instruct-2':('mistralai/Mistral-7B-Instruct-v0.2',model_config_llama2_7B),
+    'Zephyr-7B':('HuggingFaceH4/zephyr-7b-beta', mistral_config_7B),
+    'Mistral-7B':('mistralai/Mistral-7B-v0.1', mistral_config_7B),
+    'Mistral-7B-Instruct':('mistralai/Mistral-7B-Instruct-v0.1',mistral_config_7B),
+    'Mistral-7B-Instruct-2':('mistralai/Mistral-7B-Instruct-v0.2',mistral_config_7B),
 
 }
 
+# Define the function to convert the parameters
 def convert(target: str, save_path: str = '') -> None:
     path, model_config = pairs[target]
     model_pt = LlamaForCausalLM.from_pretrained(path)
