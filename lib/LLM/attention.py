@@ -58,9 +58,8 @@ def forward_attention(params: Attention, src_seq: Array, dst_seq: Array, qk_mask
     qk = op.einsum(q, k, 'B R H S K, B H D K -> B R H S D')
     qk /= math.sqrt(model_config.d_k)
     qk = jnp.where(qk_mask, qk, -jnp.inf)
-    qk = nn.softmax(qk)  # TODO: use `where`
-    # qk = nn.softmax(qk, where=qk_mask, initial=0.)
-    qk = jnp.where(qk_mask, qk, 0)  # TODO: why this line?
+    qk = nn.softmax(qk)  
+    qk = jnp.where(qk_mask, qk, 0)  
 
     qkv = op.einsum(qk, v, 'B R H S D, B H D V -> B R H S V')
     out = op.einsum(qkv, params.out_proj, 'B R H S V, R H V M -> B S M')

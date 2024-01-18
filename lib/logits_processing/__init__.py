@@ -9,7 +9,6 @@ import jax.random as rand
 
 from ..rand_utils import split_key_nullable
 
-# TODO: need type checking?
 # _, seq_len = seq.shape
 # assert seq.shape == (batch_size, seq_len)
 # assert seq.dtype == jnp.uint16

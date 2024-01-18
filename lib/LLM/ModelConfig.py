@@ -14,7 +14,6 @@ class ModelConfig(NamedTuple):
     token_id_pad: int
     vocab_size: int
 
-    # TODO: move out of model config
     dropout_rate: float | None
     return_kv_cache: bool
 
