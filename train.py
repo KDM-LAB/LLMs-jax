@@ -1,4 +1,4 @@
-from lib.proc_init_utils import initialise_tpu; initialise_tpu('v3-32')
+from lib.proc_init_utils import initialise_tpu; initialise_tpu('v3-8')
 
 import einops as op
 from functools import partial
