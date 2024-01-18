@@ -99,7 +99,7 @@ def main() -> None:
     collate_fn = partial(gsm_collate_fn_train, tokenizer, max_len)
     dataloader = LlamaDataLoader(dataset, collate_fn, batch_size, seed, drop_last=True)  # TODO: setting `drop_last` because the `batch_size` of `rotary_values` is not properly handled
 
-    params = load_params_from_disk('llama2-7B.pickle-chat')
+    params = load_params_from_disk('llama2-7B-chat.pickle')
     set_save_params_signal()
 
     n_steps = math.ceil(len(dataloader) / n_accumulation_steps)
