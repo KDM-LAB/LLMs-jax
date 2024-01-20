@@ -1,4 +1,5 @@
 from typing import NamedTuple
+from typing import Union
 
 class ModelConfig(NamedTuple):
     d_ff: int
@@ -14,7 +15,7 @@ class ModelConfig(NamedTuple):
     token_id_pad: int
     vocab_size: int
 
-    dropout_rate: float | None
+    dropout_rate: Union[float, None]
     return_kv_cache: bool
 
 model_config_dummy = ModelConfig(
