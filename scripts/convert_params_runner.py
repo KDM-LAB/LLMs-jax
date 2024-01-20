@@ -28,11 +28,11 @@ pairs = {
     'Vicuna-13B':('lmsys/vicuna-13b-v1.5-16k', model_config_llama2_13B),
     'SOLAR-10.7B-Instruct':('upstage/SOLAR-10.7B-Instruct-v1.0',model_config_solar_10_7B),
     'SOLAR-10.7B':('upstage/SOLAR-10.7B-v1.0',model_config_solar_10_7B),
-    'Zephyr-3B':('stabilityai/stablelm-zephyr-3b', zephyr_config_3B),
-    'Zephyr-7B':('HuggingFaceH4/zephyr-7b-beta', mistral_config_7B),
-    'Mistral-7B':('mistralai/Mistral-7B-v0.1', mistral_config_7B),
-    'Mistral-7B-Instruct':('mistralai/Mistral-7B-Instruct-v0.1',mistral_config_7B),
-    'Mistral-7B-Instruct-2':('mistralai/Mistral-7B-Instruct-v0.2',mistral_config_7B),
+    'StableLM-Zephyr-3B':('stabilityai/stablelm-zephyr-3b', zephyr_config_3B),
+    'Zephyr-7B-beta':('HuggingFaceH4/zephyr-7b-beta', mistral_config_7B),
+    'Mistral-7B-v0.1':('mistralai/Mistral-7B-v0.1', mistral_config_7B),
+    'Mistral-7B-Instruct-v0.1':('mistralai/Mistral-7B-Instruct-v0.1',mistral_config_7B),
+    'Mistral-7B-Instruct-v0.2':('mistralai/Mistral-7B-Instruct-v0.2',mistral_config_7B),
 
 }
 
