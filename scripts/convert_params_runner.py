@@ -27,8 +27,8 @@ pairs = {
     'Vicuna-7B':('lmsys/vicuna-7b-v1.5', model_config_llama2_7B),
     'Vicuna-13B':('lmsys/vicuna-13b-v1.5', model_config_llama2_13B),
 
-    'Vicuna-7B-1.5':('lmsys/vicuna-7b-v1.5-16k', model_config_llama2_7B),
-    'Vicuna-13B-1.5':('lmsys/vicuna-13b-v1.5-16k', model_config_llama2_13B),
+    'Vicuna-7B-v1.5':('lmsys/vicuna-7b-v1.5-16k', model_config_llama2_7B),
+    'Vicuna-13B-v1.5':('lmsys/vicuna-13b-v1.5-16k', model_config_llama2_13B),
 
     'SOLAR-10.7B-Instruct':('upstage/SOLAR-10.7B-Instruct-v1.0',model_config_solar_10_7B),
     'SOLAR-10.7B':('upstage/SOLAR-10.7B-v1.0',model_config_solar_10_7B),
