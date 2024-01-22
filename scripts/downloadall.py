@@ -38,7 +38,7 @@ def downloadall():
         print(f'Downloading {pickle_name} from {repo_name}')
         api = HfApi()
         # download it in /mnt/mydisk/models
-        local_filepath = hf_hub_download(repo_id=repo_name, filename=pickle_name, revision='main', output_dir='/mnt/mydisk/models')
+        local_filepath = hf_hub_download(repo_id=repo_name, filename=pickle_name, revision='main', cache_dir='/mnt/mydisk/models')
 
     
 
