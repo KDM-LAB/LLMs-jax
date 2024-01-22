@@ -30,6 +30,9 @@ pairs = {
     'Vicuna-7B-v1.5':('lmsys/vicuna-7b-v1.5-16k', model_config_llama2_7B),
     'Vicuna-13B-v1.5':('lmsys/vicuna-13b-v1.5-16k', model_config_llama2_13B),
 
+    'StableBeluga-7B':('stabilityai/StableBeluga-7B', model_config_llama2_7B),
+    'StableBeluga-13B':('stabilityai/StableBeluga-7B', model_config_llama2_13B),
+
     'SOLAR-10.7B-Instruct':('upstage/SOLAR-10.7B-Instruct-v1.0',model_config_solar_10_7B),
     'SOLAR-10.7B':('upstage/SOLAR-10.7B-v1.0',model_config_solar_10_7B),
     'StableLM-Zephyr-3B':('stabilityai/stablelm-zephyr-3b', zephyr_config_3B),
