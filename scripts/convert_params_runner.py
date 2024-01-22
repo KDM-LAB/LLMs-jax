@@ -40,6 +40,10 @@ pairs = {
     'Mistral-7B-v0.1':('mistralai/Mistral-7B-v0.1', mistral_config_7B),
     'Mistral-7B-Instruct-v0.1':('mistralai/Mistral-7B-Instruct-v0.1',mistral_config_7B),
     'Mistral-7B-Instruct-v0.2':('mistralai/Mistral-7B-Instruct-v0.2',mistral_config_7B),
+    # allenai/tulu-2-dpo-7b and allenai/tulu-2-dpo-13b
+
+    'Tulu-2-DPO-7B':('allenai/tulu-2-dpo-7b', model_config_llama2_7B),
+    'Tulu-2-DPO-13B':('allenai/tulu-2-dpo-13b', model_config_llama2_13B)
 
 }
 
