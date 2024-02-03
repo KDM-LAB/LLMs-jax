@@ -21,7 +21,7 @@ pairs = {
     'Mistral-7B-Instruct-v0.2':'mistralai/Mistral-7B-Instruct-v0.2',
 
     'Tulu-2-DPO-7B':'allenai/tulu-2-dpo-7b',
-    'Tulu-2-DPO-13B':'allenai/tulu-2-dpo-1',
+    'Tulu-2-DPO-13B':'allenai/tulu-2-dpo-13b',
 
 }
 

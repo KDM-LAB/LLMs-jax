@@ -43,7 +43,9 @@ pairs = {
     # allenai/tulu-2-dpo-7b and allenai/tulu-2-dpo-13b
 
     'Tulu-2-DPO-7B':('allenai/tulu-2-dpo-7b', model_config_llama2_7B),
-    'Tulu-2-DPO-13B':('allenai/tulu-2-dpo-13b', model_config_llama2_13B)
+    'Tulu-2-DPO-13B':('allenai/tulu-2-dpo-13b', model_config_llama2_13B),
+    'Tulu-2-7B':('allenai/tulu-2-7b', model_config_llama2_7B),
+    'Tulu-2-13B':('allenai/tulu-2-13b', model_config_llama2_13B)
 
 }
 
